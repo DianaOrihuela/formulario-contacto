@@ -1,0 +1,196 @@
+/* ================= RESET BÁSICO ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background-color: #eaf2fb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* ================= TITULO ================= */
+.container h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* ================= FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= LABEL ================= */
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ================= INPUT, TEXTAREA, SELECT ================= */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+}
+
+/* ================= PLACEHOLDER ================= */
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ================= TEXTAREA ================= */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ================= CHECKBOX ================= */
+.terminos {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.terminos input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ================= BOTONES ================= */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Botón primario */
+.btn.primario {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn.primario:hover {
+    background-color: #1d4ed8;
+}
+
+/* Botón secundario */
+.btn.secundario {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.btn.secundario:hover {
+    background-color: #d1d5db;
+}
+
+/* ================= MENSAJES ================= */
+.error, .exito {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: none;
+}
+
+.error {
+    background-color: #ffe5e5;
+    color: #b91c1c;
+    border-left: 5px solid #b91c1c;
+}
+
+.exito {
+    background-color: #e6f7f1;
+    color: #065f46;
+    border-left: 5px solid #065f46;
+}
+
+/* ================= OCULTO ================= */
+.oculto {
+    display: none !important;
+}
+
+/* ================= SELECTORES PSEUDO ================= */
+input:invalid {
+    border-color: #f87171;
+}
+
+input:valid {
+    border-color: #10b981;
+}
+
+/* Pseudoelementos */
+input::placeholder {
+    opacity: 0.7;
+}
+
+button::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}
